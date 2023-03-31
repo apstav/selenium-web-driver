@@ -43,14 +43,11 @@ public class MySellenium {
         driver.findElement(By.id("button-cart")).click(); // clicks add to cart button
         Thread.sleep(1000); // wait 1 sec
 
-        String txt = driver.findElement(By.className("alert")).getText();
+        String txt = driver.findElement(By.className("alert")).getText(); // gets responses text
         System.out.println(txt);
 
-        Assert.assertEquals(txt, "Success: You have added MacBook to your shopping cart! \n×");
+        Assert.assertEquals(txt, "Success: You have added MacBook to your shopping cart! \n×"); //checks if purchase succeed
 
-
-
-        //assert driver.findElement(By.className("alert")).getText().contains("Success: You have added");
         Thread.sleep(1000); // wait 1 sec
         driver.close(); // closes current tab
     }
